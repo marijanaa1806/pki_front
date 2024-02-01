@@ -1,0 +1,52 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+
+.login-page {
+    background-image: url('./images/backgr.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Hide any content that overflows the container */
+}
+.order{
+    width: 100px;
+    height: 10px;
+}
+.lista{
+    width: 500px;
+   
+   background-color: #F8F0F0;
+}
+
+.Button {
+  background-color: black;
+}
+
+.navk {
+    
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navk li {
+   
+    display: inline-block;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+  }
+  .cent{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  }
+

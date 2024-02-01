@@ -1,0 +1,135 @@
+.nav {
+    
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+   
+    display: inline-block;
+    font-size: 16px;
+    padding: 20px;
+    width: 200px;
+  }
+  .dugme{
+    margin-left: 700px;
+  }
+  
+  .x{
+    margin-top: 50px;
+    width: 200px;
+    margin-left: 100px;
+  }
+
+
+  .nav2 {
+    background-color: #461607;
+    color: #ffffff;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .nav2 ul {
+    margin: 0;
+  }
+  
+  .nav2 li {
+    display: inline-block;
+    font-size: 15px;
+    padding: 20px;
+    width: 150px;
+  }
+  
+  .gallery-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+
+
+  .slideshow {
+    overflow: hidden;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition:  ease-out 1000ms;
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+  }
+  
+  .slide {
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    border-radius: 40px;
+  }
+  
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+
+  /* Assuming you have a container for your dropdown */
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styling the button that triggers the dropdown */
+.dropdown-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Styling the dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 5px;
+  min-width: 120px; /* Adjust the width as needed */
+}
+
+/* Styling individual dropdown items */
+.dropdown-item {
+  padding: 8px;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+/* Styling the hover effect on dropdown items */
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
