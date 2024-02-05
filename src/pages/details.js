@@ -59,94 +59,85 @@ const Details = () => {
         <div className="login-page">
           <Head />
           {}
-          <div className='navk'>
-            <ul>
-              <li>
-              <img src={pictureObject.src} width={230} height={250}></img>
-              </li>
-              <li>
-                <div>
-                  <h2>{pictureObject.name}</h2>
+          <div><span class="b"  style={{backgroundColor:'#F8F0F0', border: "1px solid black"      
+}}>
+          <img src={pictureObject.src} width={300} height={300} alt='kolac'></img>
+
+            </span>
+             <span class="b" style={{backgroundColor:'#F8F0F0', border: "1px solid black"      
+}}>
+             <h2>{pictureObject.name}</h2>
                 
 
-          <label>{pictureObject.about}</label>
-          <br>
-          </br>
-          <br>
-          </br>
-          <label>{pictureObject.ingredients}</label>
-          <br>
-          </br>
-          <br>
-          </br>
-          <label>{pictureObject.price} din</label>
-         
-
-                </div>
-              </li>
-              <li>
+                <label>{pictureObject.about}</label>
+                <br>
+                </br>
+                <br>
+                </br>
+                <label style={{ fontWeight: 'bold', fontSize: '16px' }}>Sastojci:</label>
+      
+                <br>
+                </br>
+                <label>{pictureObject.ingredients}</label>
+      
+               
+                <br>
+                </br>
+                <br>
+                </br>
+                <label style={{ fontWeight: 'bold', fontSize: '18px' }}>{pictureObject.price}din</label>
+      
+              </span> 
+              <span class="b">
               <label>Unesi kolicinu:</label>
               <br></br>
               <br></br>
 
-          <div className='order'>
           <TextField  sx={{ backgroundColor: 'white' }} label="Kolicina" variant="filled" value={quantity} onChange={(e) => setQuantity(e.target.value)} />
           <br></br>
           <br></br>
 
-          <Button variant="contained" onClick={handleOrder} sx={{ backgroundColor: 'black' }}> Dodaj </Button>
+          <Button variant="contained" onClick={handleOrder} sx={{ backgroundColor: '#461607' }}> Dodaj </Button>
     <br></br>
-          </div>
-              </li>
-            </ul>
+              </span>
+              
+               </div>  
 
-          </div>
-         
-       
-          <br></br>
-          <div className='lista'>
+        <div>
+          <span className='b'>
+          <div className={`lista ${filteredOrderList.length === 0 ? 'no-background' : '#F8F0F0'}`}>
           <List>
       {filteredOrderList.map((comm, index) => (
         <React.Fragment key={index}>
           <ListItem>
             <ListItemText>{comm.comment}</ListItemText>
           </ListItem>
-          {index < filteredOrderList.length - 1 && <Divider />} {/* Add Divider except for the last item */}
+          {index < filteredOrderList.length - 1 && <Divider />}
         </React.Fragment>
       ))}
     </List>
           </div>
-          
-           <div>
-          </div>
-          <div className='navk'>
-            <ul>
-              <li>
-              <div  hidden={!showAdditionalInput}>
-          <TextField  sx={{ backgroundColor: 'white' }} label="Komentar" variant="filled"  hidden={!showAdditionalInput} value={comm} onChange={(e) => setComm(e.target.value)}/>
-          
+          </span>
+          <span className='b'>
+          <Button variant="contained" sx={{ backgroundColor: '#461607' }} onClick={handleButtonClick}>Ostavi komentar</Button>
+          <div  hidden={!showAdditionalInput}>
+            <br></br>
+            
+              <TextField  sx={{ backgroundColor: 'white' }} label="Komentar" variant="filled"  hidden={!showAdditionalInput} value={comm} onChange={(e) => setComm(e.target.value)}/>
+
+              <br></br>
+              <br></br>
+
+
+              <Button variant="contained" sx={{ backgroundColor: '#461607' }} hidden={!showAdditionalInput} onClick={handleButtonClick2}>Potvrdi</Button>
+
+              
+
        
         </div>
-              </li>
-              <li>
-              <Button variant="contained" sx={{ backgroundColor: 'black' }} onClick={handleButtonClick}>Ostavi komentar</Button>
-              <div>
-        
-              
-              <div hidden={!showAdditionalInput}>
-     
-              <Button variant="contained" sx={{ backgroundColor: 'black' }} hidden={!showAdditionalInput} onClick={handleButtonClick2}>Potvrdi</Button>
-      
-    </div>
+          </span>
         </div>
-              </li>
-            </ul>
-
-          
-     
-     
-
-    </div>
+   
 
         </div>
       );

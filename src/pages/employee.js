@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import HeadZ from "../components/headZ";
 import '../background.css'
-import ParametrizedDropdown from '../components/parametrized';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Stack from '@mui/material/Stack';
@@ -51,6 +50,7 @@ const Employee = () => {
       const imageList = JSON.parse(sessionImages) || [];
       imageList.push(newImage);
       sessionStorage.setItem('images', JSON.stringify(imageList));
+      alert("item added");
   };
   
   const handleAccept = (orderIndex) => {
@@ -162,7 +162,7 @@ label="Naziv" variant="filled" value={name} onChange={(e) => setName(e.target.va
 
        
         </div>
-        <div  className='lista'>
+        <div className={`lista ${filteredOrderList.length === 0 ? 'no-background' : '#F8F0F0'}`}>
         <List>
   {filteredOrderList.map((orderItem, index) => (
     <React.Fragment key={index}>

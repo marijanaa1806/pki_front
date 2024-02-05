@@ -93,6 +93,7 @@ const MenuItem = ({ to, label }) => {
             existingOrderList.push(userDataWithOrders);
             sessionStorage.setItem('ordersList', JSON.stringify(existingOrderList));
             sessionStorage.removeItem('orderData');
+            alert("order added");
             navigate(currentPath);
           } else if(result.isDismissed){
             navigate(currentPath);

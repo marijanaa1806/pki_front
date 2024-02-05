@@ -27,12 +27,15 @@ body, html {
 .Button {
   background-color: black;
 }
-
+.no-background {
+  background-color: transparent;
+}
 .navk {
     
     list-style-type: none;
     margin: 0;
     padding: 0;
+   display: 'flex'; 
   }
   
   .navk li {
@@ -50,3 +53,12 @@ body, html {
   height: 100px;
   }
 
+  span.b {  
+    margin-top: '50px';
+    display: inline-block;  
+    width: 300px;  
+    height: 300px;  
+    padding: 5px;  
+    overflow: hidden; /* Prevent text from causing the div to expand vertically */
+
+  }  
