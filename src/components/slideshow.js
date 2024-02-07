@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../styles.css';
 
 const images = [
-    { name: 'Image 1', src: 't1.jfif' },
-    { name: 'Image 2', src: 't2.jfif' },
-    { name: 'Image 4', src: 't4.jfif' }
+    { name: 'Samo danas 3 po ceni 2!', src: 't1.jfif' },
+    { name: 'Snizenje 30%', src: 't2.jfif' },
+    { name: 'Utorkom do 13h gratis limunada ', src: 't4.jfif' }
   ];
 const delay = 3500;
 

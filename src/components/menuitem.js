@@ -9,7 +9,7 @@ const MenuItem = ({ to, label }) => {
     const [orderList, setOrderList] = React.useState(JSON.parse(orders) || []);
    
     const handleClick = () => {
-      if (label === 'Obavestenja') {
+      if (label === 'Obaveštenja') {
        const userS = sessionStorage.getItem('user');
        const user = JSON.parse(userS);
         const userOrders = orderList.filter(orderItem => orderItem.user === user.username);
@@ -30,7 +30,7 @@ const MenuItem = ({ to, label }) => {
     `).join('');
     
         Swal.fire({
-          title: "Obavestenja",
+          title: "Obaveštenja",
           html: `
             <ul>
               ${notificationsList}
@@ -93,7 +93,7 @@ const MenuItem = ({ to, label }) => {
             existingOrderList.push(userDataWithOrders);
             sessionStorage.setItem('ordersList', JSON.stringify(existingOrderList));
             sessionStorage.removeItem('orderData');
-            alert("order added");
+            alert("Porudžbina poslata");
             navigate(currentPath);
           } else if(result.isDismissed){
             navigate(currentPath);

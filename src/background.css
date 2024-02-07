@@ -6,13 +6,13 @@ body, html {
 
 
 .login-page {
-    background-image: url('./images/backgr.png');
-    background-size: cover;
+  background-image: url('./images/backgr.png');
+  background-size: cover;
     background-position: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden; /* Hide any content that overflows the container */
+    overflow: hidden; 
 }
 .order{
     width: 100px;
@@ -59,6 +59,6 @@ body, html {
     width: 300px;  
     height: 300px;  
     padding: 5px;  
-    overflow: hidden; /* Prevent text from causing the div to expand vertically */
+    overflow: hidden;
 
   }  

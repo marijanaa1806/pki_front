@@ -34,7 +34,7 @@ const Details = () => {
       const existingOrderList = JSON.parse(existingOrderListString) || [];
       existingOrderList.push(orderData);
       sessionStorage.setItem('orderData', JSON.stringify(existingOrderList));
-    
+      setQuantity("");
        
     };
     const [showAdditionalInput, setShowAdditionalInput] = useState(false);
@@ -59,7 +59,7 @@ const Details = () => {
         <div className="login-page">
           <Head />
           {}
-          <div><span class="b"  style={{backgroundColor:'#F8F0F0', border: "1px solid black"      
+          <div style={{ marginTop:'20px',marginLeft:'20px' }}><span class="b"  style={{backgroundColor:'#F8F0F0', border: "1px solid black"      
 }}>
           <img src={pictureObject.src} width={300} height={300} alt='kolac'></img>
 
@@ -89,7 +89,7 @@ const Details = () => {
       
               </span> 
               <span class="b">
-              <label>Unesi kolicinu:</label>
+              <label>Unesi količinu:</label>
               <br></br>
               <br></br>
 
@@ -103,7 +103,7 @@ const Details = () => {
               
                </div>  
 
-        <div>
+        <div style={{marginLeft:'20px' }}>
           <span className='b'>
           <div className={`lista ${filteredOrderList.length === 0 ? 'no-background' : '#F8F0F0'}`}>
           <List>
@@ -127,7 +127,6 @@ const Details = () => {
 
               <br></br>
               <br></br>
-
 
               <Button variant="contained" sx={{ backgroundColor: '#461607' }} hidden={!showAdditionalInput} onClick={handleButtonClick2}>Potvrdi</Button>
 

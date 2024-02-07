@@ -15,8 +15,8 @@ import Details from "./pages/details";
 export default function App() {
   const [loggedInUser, setLoggedInUser] = useState(null);
   const [users, setUsers] = useState([
-    { username: 'marijana', password: '123', employee: 0,name:"marijana",surname:"vacic",phone:"0692314344",address:"avalska" },
-    { username: 'petar', password: '1234', employee: 1,name:"petar",surname:"radivojevic",phone:"0658830263",address:"27marta" },
+    { username: 'marijana', password: '123', employee: '0',name:"marijana",surname:"vacic",phone:"0692314344",address:"avalska" },
+    { username: 'petar', password: '1234', employee: '1',name:"petar",surname:"radivojevic",phone:"0658830263",address:"27marta" },
   ]);
 
   const handleLogin = (username) => {
@@ -37,7 +37,7 @@ export default function App() {
       ...prevUsers,
       { username, password, employee,name, surname, phone, address},
     ]);
-    alert('Registration successfully!');
+    alert('Uspešna registracija!');
   };
   
  
@@ -52,7 +52,6 @@ export default function App() {
     address
     
   }) => {
-    // Perform additional validation if needed
     if (username && password && name && surname && phone && address && employee) {
       const updatedUserIndex = users.findIndex(user => user.username === loggedInUser);
   
@@ -75,10 +74,10 @@ export default function App() {
   
        
       } else {
-        alert('User not found.');
+        alert('Korisnik ne postoji');
       }
     } else {
-      alert('Please enter all required information.');
+      alert('Unesite sve podatke');
     }
   };
   

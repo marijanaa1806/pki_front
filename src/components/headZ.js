@@ -18,7 +18,6 @@ const HeadZ = () => {
    
     { to: "/change", label: "Promena podataka" },
     { to: "/", label: "Odjava", onClick: handleLogout },
-    // Add more menu items as needed
   ];
 
   return (

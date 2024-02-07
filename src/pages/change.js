@@ -20,11 +20,11 @@ const ChangePage = ({ onUpdate }) => {
   const [employee, setEmployee] = useState('');
 
   useEffect(() => {
-    // Fetch user data from session storage
     const userData = sessionStorage.getItem('user');
     if (userData) {
       const user = JSON.parse(userData);
       setUsername(user.username || '');
+      setPassword(user.password || '');
       setName(user.name || '');
       setSurname(user.surname || '');
       setPhone(user.phone || '');
@@ -40,20 +40,25 @@ const ChangePage = ({ onUpdate }) => {
   };
 
   const handleUpdate = () => {
-    // Perform additional validation if needed
+  
     if (username && password && name && surname && phone && address && employee) {
      
         onUpdate({ username, password,employee,name,surname,phone,address });
         if (employee === '1') {
+          alert('Uspešno ažurirano.');
+
           navigate('/employee');
         } else {
+          alert('Uspešno ažurirano.');
+
           navigate('/buyer');
         }
       } else {
-        alert('User not found.');
+        alert('Korisnik ne postoji');
       }
    
   };
+  
 
   return (
     <div className="login-page">
@@ -93,7 +98,7 @@ const ChangePage = ({ onUpdate }) => {
             <li>
             <Stack direction="column" spacing={5}>
             <div>
-            <label>Korisnicko ime:</label>
+            <label>Korisničko ime:</label>
             <br></br>
             <br></br>
             <br></br>
@@ -153,17 +158,8 @@ const ChangePage = ({ onUpdate }) => {
         <div class="cent">
         <Stack direction="row" spacing={2}>
 
-            <div class="x">
-        <label>Kupac
-        </label>
-        <input type="radio" value={0} checked={employee === '0'} onChange={handleOptionChange} />
         
-        <label>Zaposleni
-        </label>
-        <input type="radio" value={1} checked={employee === '1'} onChange={handleOptionChange} />
-        </div>
-        
-        <Button variant="contained" onClick={handleUpdate}>Update</Button>
+        <Button variant="contained" sx={{ backgroundColor: '#461607' }} onClick={handleUpdate}>Izmeni</Button>
         </Stack>
         </div>
        

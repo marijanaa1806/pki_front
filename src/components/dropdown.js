@@ -8,7 +8,6 @@ const Dropdown = ({ options, onChange }) => {
     const selectedOption = options[selectedIndex];
     setSelectedOption(selectedOption);
 
-    // Pass the selected option object to the parent component
     if (onChange) {
       onChange(selectedOption);
     }

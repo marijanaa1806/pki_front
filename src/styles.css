@@ -92,13 +92,11 @@
     background-color: #6a0dad;
   }
 
-  /* Assuming you have a container for your dropdown */
 .dropdown-container {
   position: relative;
   display: inline-block;
 }
 
-/* Styling the button that triggers the dropdown */
 .dropdown-button {
   background-color: #3498db;
   color: #fff;
@@ -106,7 +104,6 @@
   cursor: pointer;
 }
 
-/* Styling the dropdown menu */
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -117,10 +114,9 @@
   border-radius: 4px;
   padding: 8px;
   margin-top: 5px;
-  min-width: 120px; /* Adjust the width as needed */
+  min-width: 120px; 
 }
 
-/* Styling individual dropdown items */
 .dropdown-item {
   padding: 8px;
   cursor: pointer;
@@ -129,7 +125,6 @@
   display: block;
 }
 
-/* Styling the hover effect on dropdown items */
 .dropdown-item:hover {
   background-color: #f1f1f1;
 }

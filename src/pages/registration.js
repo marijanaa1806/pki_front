@@ -33,7 +33,7 @@ const RegistrationPage = ({ onRegister }) => {
       navigate('/');
 
     } else {
-      alert('Please enter all fields.');
+      alert('Unesite sva polja');
     }
   };
 
@@ -73,7 +73,7 @@ const RegistrationPage = ({ onRegister }) => {
             <li>
             <Stack direction="column" spacing={5}>
             <div>
-            <label>Korisnicko ime:</label>
+            <label>Korisničko ime:</label>
             <br></br>
             <br></br>
             <br></br>
@@ -131,14 +131,14 @@ const RegistrationPage = ({ onRegister }) => {
             <div className="x">
         <label>Kupac
         </label>
-        <input type="radio" value={0} checked={employee === '0'} onChange={handleOptionChange} />
+        <input type="radio" value={'0'} checked={employee === '0'} onChange={handleOptionChange} />
         
         <label>Zaposleni
         </label>
-        <input type="radio" value={1} checked={employee === '1'} onChange={handleOptionChange} />
+        <input type="radio" value={'1'} checked={employee === '1'} onChange={handleOptionChange} />
         </div>
         <div class="cent">
-        <Button  variant="contained" sx={{ backgroundColor: 'black' }} onClick={handleRegister}>
+        <Button  variant="contained" sx={{ backgroundColor: '#461607' }} onClick={handleRegister}>
           Registruj se
         </Button>
 </div>

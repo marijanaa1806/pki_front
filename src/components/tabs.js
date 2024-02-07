@@ -9,7 +9,7 @@ export default function ColorTabs({ selectedValue, onChange }) {
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
-    onChange(event, newValue); // Call the onChange prop passed from the parent
+    onChange(event, newValue); 
   };
 
   return (

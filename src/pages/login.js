@@ -25,19 +25,17 @@ const LoginPage = ({ onLogin, users }) => {
     if (user) {
       sessionStorage.setItem('user', JSON.stringify(user));
       onLogin(username); 
-      if (user.employee === 1) {
+      if (user.employee === '1') {
         navigate('/employee');
       } else {
         navigate('/buyer');
       }
 
     } else {
-      alert('Invalid username or password.');
+      alert('Losi kredencijali');
     }
   };
   const handleReg = () => {
-    // Perform additional validation if needed
-
     navigate('/registration');
 
   };
@@ -52,7 +50,7 @@ const LoginPage = ({ onLogin, users }) => {
       <div className='nav'>
 <li>
 <Stack direction="column" spacing={3}>
-            <label>Korisnicko ime:</label>
+            <label>Korisničko ime:</label>
             <br></br>
             <br></br>
 
@@ -72,7 +70,7 @@ type="password" label="Lozinka" variant="filled"value={password} onChange={(e) =
            </div>
             <br></br>
             <div className='cent'>
-        <Button variant="contained" onClick={handleLogin} sx={{ backgroundColor: 'black' }} >
+        <Button variant="contained" onClick={handleLogin} sx={{ backgroundColor: '#461607' }} >
         Login
       </Button>
        <br>
@@ -80,8 +78,8 @@ type="password" label="Lozinka" variant="filled"value={password} onChange={(e) =
        <br>
        </br>
        
-       <Button variant="contained" sx={{ backgroundColor: 'black' }} onClick={handleReg}>
-           Register
+       <Button variant="contained" sx={{ backgroundColor: '#461607' }} onClick={handleReg}>
+           Registracija
          </Button>
     
       </div>

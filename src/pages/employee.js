@@ -50,7 +50,13 @@ const Employee = () => {
       const imageList = JSON.parse(sessionImages) || [];
       imageList.push(newImage);
       sessionStorage.setItem('images', JSON.stringify(imageList));
-      alert("item added");
+      alert("Dodat artikal");
+      setName("");
+      setAbout("");
+      setPrice("");
+      setIngredients("");
+      setImage(null);
+      setTorta(null);
   };
   
   const handleAccept = (orderIndex) => {
@@ -153,7 +159,7 @@ label="Naziv" variant="filled" value={name} onChange={(e) => setName(e.target.va
  label="Naziv" variant="filled" value={ingredients} onChange={(e) => setIngredients(e.target.value)}/>
                 <br></br>
                 <br></br>
-                <Button variant="contained" sx={{ backgroundColor: 'black' }} onClick={()=>handleSaving()}>Unesi</Button>
+                <Button variant="contained" sx={{ backgroundColor: '#461607' }} onClick={()=>handleSaving()}>Unesi</Button>
 
             </div>
             </Stack>
@@ -189,7 +195,7 @@ label="Naziv" variant="filled" value={name} onChange={(e) => setName(e.target.va
           Odbij
         </Button>
       </ListItem>
-      {index < filteredOrderList.length - 1 && <Divider />} {/* Add Divider except for the last item */}
+      {index < filteredOrderList.length - 1 && <Divider />} {}
     </React.Fragment>
   ))}
 </List>

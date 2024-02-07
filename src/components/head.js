@@ -15,13 +15,12 @@ const Head = () => {
   };
   const menuItems = [
     { to: "/promo", label: "Promocije" },
-    { to: "/cakes", label: "Torte i kolaci" },
-    { to: "/buyer", label: "Obavestenja" },
+    { to: "/cakes", label: "Torte i kolači" },
+    { to: "/buyer", label: "Obaveštenja" },
     { to: "/contact", label: "Kontakt" },
     { to: "/buyer", label: "Korpa" },
     { to: "/change", label: "Promena podataka" },
     { to: "/", label: "Odjava", onClick: handleLogout },
-    // Add more menu items as needed
   ];
 
   return (

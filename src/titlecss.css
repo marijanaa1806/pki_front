@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: 'Inika';
-    src: url('./fonts/InriaSerif-Regular.ttf') format('truetype'); /* Adjust the path and format accordingly */
+    src: url('./fonts/InriaSerif-Regular.ttf') format('truetype'); 
     font-weight: normal;
     font-style: normal;
-    font-size: 16px; /* Set the font size to 16 pixels */
+    font-size: 16px; 
 
   }
   
   body {
-    font-family: 'Inika', serif; /* Apply the font to the entire body */
+    font-family: 'Inika', serif; 
   }
   
